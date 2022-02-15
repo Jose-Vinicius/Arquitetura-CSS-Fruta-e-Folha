@@ -1,0 +1,19 @@
+.quemSomos{
+    background-color: $white;
+    padding: 4.5rem;
+    text-align: center;
+
+    &__titulo{
+        color: $red-wine;
+        font-family: Pacifico, cursive;
+        font-size: 3.45rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+
+    &__descricao{
+        color: $light-gray;
+        font-size: 1.70rem;
+        font-weight: 100;
+    }
+}

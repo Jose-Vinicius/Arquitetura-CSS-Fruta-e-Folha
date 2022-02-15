@@ -1,0 +1,68 @@
+
+.header{
+    align-items: center;
+    background-color: $green;
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    padding: 0 2rem;
+    @include forPhone-only{
+        width: 100;
+        height: 250px;
+        flex-direction: column;
+    }
+
+    &__logo{
+        width: 150px;
+
+        @include forPhone-only{
+            width: 200px;
+        }
+    }
+
+    
+
+    .list{
+
+        &__group{
+        list-style: none;
+        display: flex;
+
+        @include forPhone-only{
+            padding: 15px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        }
+        
+        &__links{
+            transition: 0.2s;
+            &:hover{
+                transform: translateY(-3px);
+            }
+            &:first-child > a{
+                color: #000000ee;
+                font-weight: bold;
+            }
+            
+        }
+
+        &__links > a{
+            color: $dark-gray;
+            font-size: 22px;
+            margin: 0 1.25rem;
+            text-decoration: none;
+            transition: 0.3s;
+
+            @include forPhone-only{
+                font-size: 20px;
+                margin: 20px 0.8rem;
+                white-space: nowrap;
+            }
+            &:hover{
+                color: $destaque;
+            }
+            
+        }
+    }
+}

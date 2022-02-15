@@ -1,0 +1,30 @@
+$green:#016e06c2;
+$dark-gray:#2b2c2bee;
+$destaque: #eeff00;
+$white: #fdfdfd;
+$light-black: #1a1a1af3;
+$red-wine:#8d0606;
+$light-red-wine:#d40000;
+$light-gray:#595959;
+$dark-white:#fdfdfd;
+
+//Scroll suave
+@media (prefers-reduce-motion: no-preference){
+    html{
+        scroll-behavior: smooth;
+    }
+}
+
+
+@mixin forPhone-only{
+    @media (max-width: 720px){
+         @content;
+    }
+}
+
+:target{
+    scroll-margin-top: .8em;
+}
+
+@import "header", "banner", "sobre", "receitas", "quemSomos", "pessoas", "footer";
+

@@ -1,0 +1,71 @@
+.receitas{
+    background-color: #e5e5e5;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem 0 0 5rem;
+
+    @include forPhone-only{
+        flex-direction: column;
+        padding: 2rem 0 0 2rem;
+    }
+}
+
+.receita{
+    background: $dark-white;
+    box-shadow: 10px 15px 15px 0px rgba(41,41,41,1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:5rem;
+    margin-right:5rem;
+    transition: all 0.3s;
+    width: calc(30% - 3rem);
+    @include forPhone-only{
+        width: 90%;
+        
+    }
+
+    &:hover{
+        transform: translate(5px, -5px);
+    }
+
+    &__conteudo{
+        padding: 1rem;
+    }
+
+    &__imagem{
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        height: 200px;
+        width: 100%;
+    }
+
+    &__titulo{
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    &__descricao{
+        color: $light-gray;
+        font-size: 1.15rem;
+        line-height: 1.2;
+        padding: 8px 0;
+        text-align: justify;
+    }
+
+    &__botao{
+        background-color: $red-wine;
+        border: none;
+        border-radius: 5px;
+        color: $dark-white;
+        font-weight: bold;
+        padding: 1rem;
+        transition: all 0.3s;
+        
+        &:hover{
+            cursor: pointer;
+            background: $light-red-wine;
+            transform: scale(1.05);
+        }
+    }
+}
